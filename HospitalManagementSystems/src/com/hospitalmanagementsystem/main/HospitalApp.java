@@ -41,7 +41,7 @@ public class HospitalApp {
                 System.out.print("Choose an option: ");
 
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -79,7 +79,7 @@ public class HospitalApp {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -158,7 +158,7 @@ public class HospitalApp {
     private static void updatePatient(Scanner scanner, PatientDao patientDao) throws ParseException {
         System.out.print("Enter Patient ID: ");
         int patientId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter First Name: ");
         String firstName = scanner.nextLine();
         System.out.print("Enter Last Name: ");
@@ -284,7 +284,7 @@ public class HospitalApp {
     private static void getDoctorById(Scanner scanner, DoctorDao doctorDao) {
         System.out.print("Enter Doctor ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         try {
             Doctor doctor = doctorDao.getDoctorById(id);
@@ -331,7 +331,7 @@ public class HospitalApp {
     private static void deleteDoctor(Scanner scanner, DoctorDao doctorDao) {
         System.out.print("Enter Doctor ID: ");
         int doctorId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             if (doctorDao.deleteDoctor(doctorId)) {
@@ -418,7 +418,7 @@ public class HospitalApp {
     private static void getAppointmentById(Scanner scanner, AppointmentDao appointmentDao) {
         System.out.print("Enter Appointment ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         try {
             Appointment appointment = appointmentDao.getAppointmentById(id);
@@ -431,7 +431,7 @@ public class HospitalApp {
     private static void getAppointmentsForPatient(Scanner scanner, AppointmentDao appointmentDao) {
         System.out.print("Enter Patient ID: ");
         int patientId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             List<Appointment> appointments = appointmentDao.getAppointmentsForPatient(patientId);
@@ -444,7 +444,7 @@ public class HospitalApp {
     private static void getAppointmentsForDoctor(Scanner scanner, AppointmentDao appointmentDao) {
         System.out.print("Enter Doctor ID: ");
         int doctorId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             List<Appointment> appointments = appointmentDao.getAppointmentsForDoctor(doctorId);
@@ -457,13 +457,13 @@ public class HospitalApp {
     private static void updateAppointment(Scanner scanner, AppointmentDao appointmentDao) throws ParseException {
         System.out.print("Enter Appointment ID: ");
         int appointmentId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
         System.out.print("Enter Patient ID: ");
         int patientId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter Doctor ID: ");
         int doctorId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter Appointment Date (yyyy-MM-dd): ");
         String appDate = scanner.nextLine();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -487,7 +487,7 @@ public class HospitalApp {
     private static void cancelAppointment(Scanner scanner, AppointmentDao appointmentDao) {
         System.out.print("Enter Appointment ID: ");
         int appointmentId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         try {
             if (appointmentDao.cancelAppointment(appointmentId)) {
